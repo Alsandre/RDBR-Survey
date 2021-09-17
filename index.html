@@ -1,0 +1,136 @@
+
+
+<!doctype html>
+<html lang="en">
+<head> 
+  <meta charset="utf-8">
+  <title>css demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="vanila.js"></script>
+</head>
+<body>
+ 
+ <div class="landing-page">
+     <div class="logo start-icon"><img src="assets/startIcon.svg" alt=""></div>
+     <div class="start-container font-family">
+         <button class="start-button button-default">კითხვარის<br>დაწყება</button>
+     </div>
+ </div>
+
+ <main class="survey-wraper">
+
+    <!--header is meant to be same for all 4 pages
+        thus separated from content, to be accessable-->
+    <header class="header">
+        <img src="assets/label.svg" class="redberry-label" style="height: 1.25vw;" alt="">
+        <span class="page-number">1/4</span>
+    </header>
+
+    <!--CONTENT-->
+    <div class="first-page page-container">
+        <form class="question-container">
+            <div class="input-container">
+                <label for="name">სახელი&#42;</label>
+                <input  id="name" 
+                        name="name" 
+                        value="იოსებ"
+                        type="text" 
+                        class="input-box" 
+                        placeholder="იოსებ" 
+                        pattern="[ა-ჰa-zA-z]{3,255}"
+                        minlength="3" 
+                        maxlength="255" 
+                        required >
+                </input>
+            </div>
+            <div class="input-container">
+                <label for="lastName">გვარი&#42;</label>
+                <input  id="lastName" 
+                        name="lastName" 
+                        type="text" 
+                        class="input-box" 
+                        placeholder="ჯუღაშვილი" 
+                        pattern="[ა-ჰa-zA-z]{3,255}"
+                        minlength="3" 
+                        maxlength="255" 
+                        required >
+                </input>
+            </div>
+            <div class="input-container">
+                <label for="email">მეილი&#42;</label>
+                <input  id="email" 
+                        name="email" 
+                        type="email" 
+                        class="input-box" 
+                        placeholder="sssr@redberry.ge" 
+                        pattern="[\w\.]{3,}@redberry.ge"
+                        required >
+                </input>
+            </div>
+            <span class="first-page-note"><b class="overline"></b><p class="note">*-ით მონიშნული ველების შევსება<br> სავალდებულოა</p></span>
+            <input type="image" src="assets/arrowRight.svg" alt="submit" class="arrow-forward">
+        </form>
+        <div class="ilustration">
+            <div class="eye-cover"><div class="cover"></div></div>
+            <img src="assets/firstPageIlustration.svg" style="width: 47.08vw;" alt="">
+        </div>
+    </div>
+
+    <div class="second-page page-container">
+        <div class="question-container">
+            <h1 style="font-size: 1.5vw; font-weight: normal; margin: 10px 0 12px 0;">გაქვს გადატანილი Covid-19?* </h1>
+            <form action="data.html">
+                <label class="radio-container"> კი
+                    <input type="radio" name="covid" id="covid-positive" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+                <label class="radio-container"> არა
+                    <input type="radio" name="covid" id="covid-negative" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+                <label class="radio-container"> ახლა მაქვს
+                    <input type="radio" name="covid" id="covid-ongoing" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+            </form>
+            <div class="optional-covidPositive" style="display: none;">
+                <h1 style="font-size: 1.5vw; font-weight: normal; margin: 10px 0 12px 0;">ანტისხეულების ტესტი გაქვს გაკეთებული?*</h1>
+                <form action="data.html">
+                    <label class="radio-container"> კი
+                        <input type="radio" name="antibody-test" id="antibody-positive" style="opacity: 0; position: absolute; cursor: pointer;">
+                        <span class="radio-checkmark"></span>
+                    </label>
+                    <label class="radio-container"> არა
+                        <input type="radio" name="antibody-test" id="antibody-negative" style="opacity: 0; position: absolute; cursor: pointer;">
+                        <span class="radio-checkmark"></span>
+                    </label>
+                </form>
+            </div>
+            <div class="optional-pcrPositive" style="display: none;">
+                <h1 style="font-size: 1.1vw;">თუ გახსოვს, გთხოვ მიუთითე ტესტის მიახლოებითი რიცხვი და ანტისხეულების რაოდენობა*</h1>
+                <form action="data.html">
+                    <input style="font-size: 0.9vw; background-color: #eaeaea;" class="input-box" type="text" placeholder="რიცხვი">
+                    <input style="font-size: 0.9vw; background-color: #eaeaea;" class="input-box" type="text" placeholder="ანტისხეულების რაოდენობა">
+                </form>
+            </div>
+        </div>
+        <div class="ilustration">
+            <div class="temperature-cover"><div></div></div>
+            <img src="assets/vaccinatePic.svg" style="width: 47.08vw;" alt="">
+        </div>
+    </div>
+ 
+    <div class="third-page page-container">
+
+    </div>
+
+    <div class="fourth-page page-container">
+
+    </div>
+ </main>
+
+</script>
+ 
+</body>
+</html>

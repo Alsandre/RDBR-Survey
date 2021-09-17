@@ -1,0 +1,248 @@
+/*============== RESET ============== */
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+}
+
+/*============ ANIMATION ============ */
+@keyframes startingAnim {
+    from {
+        scale: 5000%;
+    }
+    to {
+        scale: 100%;
+    }
+}
+@keyframes slideIn {
+    0% {
+        transform: translateY(-300px);
+    }
+    100% {
+
+    }
+}
+@keyframes popUp {
+    from {
+      transform: translateX(-100%) translateY(100%);
+  }
+    to {}
+}
+
+/*========== DEFAULT STYLES =========== */
+body {
+    background-color: #eaeaea;
+}
+.header {
+    width: 79.16vw;
+    box-shadow: 0 1px 0 #232323;
+    border-bottom: 1px solid #232323;
+    margin: auto;
+    padding-top: 5.05vw;
+    position: relative;
+    margin-bottom: 20px;
+}
+.redberry-label {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    display: inline-block;
+}
+.page-number {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    font-size: 2vw;
+    line-height: 2vw;
+    display: inline-block;
+}
+.input-box {
+    margin-top: 1vw;
+    width: 26.71vw;
+    height: 2.6vw;
+    padding: 2px;
+}
+
+/*
+survey is initialy hidden and shown when start button is clicked
+which simultaniously hides away landing page
+*/
+.survey-wraper {
+    display: none;
+}
+
+/*=========== LANDING PAGE  =========== */
+.landing-page  {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.start-icon {
+    animation: startingAnim 0.5s linear;
+    width: 23.69vw;
+    height: 25.74vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start-icon img {
+    width: 5.2vw;
+}
+.start-container {
+    width: 25.93vw;
+    height: 16.57vh;
+    overflow: hidden;
+}
+.start-button {
+    width: 25.93vw;
+    height: 16.57vh;
+    font-size: 1.56vw;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    animation: slideIn 1.2s linear;
+    background-color: #eaeaea;
+    border: none;
+    box-shadow: none;
+}
+.start-button:hover {
+    text-shadow: 3px 0px 0 grey, 0 2px 0 grey;
+    cursor: pointer;
+}
+
+
+
+/*============ FIRST PAGE =========== */
+.first-page {
+    display: unset;
+}
+.page-container {
+    width: 79.16vw;
+    display: flex;
+    margin: 0 auto 100px auto;
+    box-sizing: border-box;
+}
+.question-container {
+    width: 32.29vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+.question-container div label {
+    font-weight: 500;
+}
+.input-container {
+    max-width: 26.71vw;
+    margin-top: 4.16vh;
+}
+.ilustration {
+    position: relative;
+}
+.first-page-note {
+
+}
+.overline {
+    display: inline-block;
+    width: 12.34vw;
+    height: 1px;
+    background-color: #232323;
+    margin-top: 7.18vh;
+    margin-bottom: 1.8vh;
+}
+.note {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.83vw;
+}
+.eye-cover {
+    width: 32.39vw;
+    height: 4vw;
+    position: absolute;
+    top: 11vw;
+    left: 7.34vw;
+    overflow: hidden;
+    z-index: -1;
+}
+.cover {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #D6D16E;
+    animation: popUp 0.5s linear;
+}
+.arrow-forward {
+    width: 0.9vw;
+    min-width: 8px;
+    position: absolute;
+    right: -35%;
+    bottom: -45px;
+    opacity: 0.5;
+    cursor: default;
+}
+/*============ SECOND PAGE =========== */
+.second-page {
+    display: none;
+}
+.radio-container {
+  width: 32.29vw;
+  display: flex;
+  flex-direction: column;
+}
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1.4vw;
+}
+.radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.8rem;
+  width: 0.8rem;
+  padding: 0.04rem;
+  background-color: #eee;
+  border-radius: 50%;
+  border: 1px solid grey;
+}
+.second-page>.question-container input:checked ~ .radio-checkmark {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.temperature-cover {
+    width: 11.92vw;
+    height: 11.92vw;
+    border-radius: 50%;
+    background-color: #DD3939;
+    position: absolute;
+    z-index: -1;
+    top: 12vw;
+    left: 4vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*============ THIRD PAGE =========== */
+
+/*============ FOURTH PAGE =========== */
