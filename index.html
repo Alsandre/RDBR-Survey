@@ -11,12 +11,12 @@
 </head>
 <body>
  
- <div class="landing-page">
+ <!-- <div class="landing-page">
      <div class="logo start-icon"><img src="assets/startIcon.svg" alt=""></div>
      <div class="start-container font-family">
          <button class="start-button button-default">კითხვარის<br>დაწყება</button>
      </div>
- </div>
+ </div> -->
 
  <main class="survey-wraper">
 
@@ -28,13 +28,12 @@
     </header>
 
     <!--CONTENT-->
-    <div class="first-page page-container">
+    <!-- <div class="first-page page-container">
         <form class="question-container">
             <div class="input-container">
                 <label for="name">სახელი&#42;</label>
                 <input  id="name" 
                         name="name" 
-                        value="იოსებ"
                         type="text" 
                         class="input-box" 
                         placeholder="იოსებ" 
@@ -69,18 +68,18 @@
                 </input>
             </div>
             <span class="first-page-note"><b class="overline"></b><p class="note">*-ით მონიშნული ველების შევსება<br> სავალდებულოა</p></span>
-            <input type="image" src="assets/arrowRight.svg" alt="submit" class="arrow-forward">
+            <input type="image" src="assets/arrowRight.svg" alt="submit" class="arrow-forward" id="first-arrow-forward">
         </form>
         <div class="ilustration">
             <div class="eye-cover"><div class="cover"></div></div>
-            <img src="assets/firstPageIlustration.svg" style="width: 47.08vw;" alt="">
+            <img src="assets/firstPageIlustration.svg" class="images" alt="">
         </div>
-    </div>
+    </div> -->
 
     <div class="second-page page-container">
         <div class="question-container">
-            <h1 style="font-size: 1.5vw; font-weight: normal; margin: 10px 0 12px 0;">გაქვს გადატანილი Covid-19?* </h1>
-            <form action="data.html">
+            <h1 style="font-size: 1.5vw; font-weight: 700; margin: 10px 0 12px 0;">გაქვს გადატანილი Covid-19?* </h1>
+            <form action="">
                 <label class="radio-container"> კი
                     <input type="radio" name="covid" id="covid-positive" style="opacity: 0; position: absolute; cursor: pointer;">
                     <span class="radio-checkmark"></span>
@@ -114,19 +113,120 @@
                     <input style="font-size: 0.9vw; background-color: #eaeaea;" class="input-box" type="text" placeholder="ანტისხეულების რაოდენობა">
                 </form>
             </div>
+            <input type="image" src="assets/arrowRight.svg" alt="submit" class="arrow-forward" id="second-arrow-forward">
+            <input type="image" src="assets/arrowLeft.svg" alt="submit" class="arrow-back" id="second-arrow-back">
         </div>
         <div class="ilustration">
-            <div class="temperature-cover"><div></div></div>
-            <img src="assets/vaccinatePic.svg" style="width: 47.08vw;" alt="">
+            <div class="temperature-cover"></div>
+            <img src="assets/secondPageIlustration.svg" class="images" alt="">
         </div>
     </div>
- 
-    <div class="third-page page-container">
 
+    <div class="third-page page-container">
+        <div class="question-container">
+            <h1 style="font-size: 1.5vw; font-weight: normal; margin: 10px 0 12px 0;">უკვე აცრილი ხარ?*</h1>
+            <form action="">
+                <label class="radio-container"> კი
+                    <input type="radio" name="pcr-test" id="pcr-yes" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+                <label class="radio-container"> არა
+                    <input type="radio" name="pcr-test" id="pcr-no" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+            </form>
+            <div class="optional-pcrLevel">
+                <h1 style="font-size: 1.5vw; font-weight: normal; margin: 10px 0 12px 0;">აირჩიე რა ეტაპზე ხარ*</h1>
+                <form action="">
+                    <label class="radio-container"> პირველი დოზა და დარეგისტრირებული ვარ მეორეზე
+                        <input type="radio" name="pcr-test-stage" id="pcr-almostSecond" style="opacity: 0; position: absolute; cursor: pointer;">
+                        <span class="radio-checkmark"></span>
+                    </label>
+                    <label class="radio-container"> სრულად აცრილი ვარ
+                        <input type="radio" name="pcr-test-stage" id="pcr-complete" style="opacity: 0; position: absolute; cursor: pointer;">
+                        <span class="radio-checkmark"></span>
+                    </label>
+                    <label class="radio-container"> პირველი დოზა და არ დავრეგისტრირებულვარ მეორეზე
+                        <input type="radio" name="pcr-test-stage" id="pcr-firstStage" style="opacity: 0; position: absolute; cursor: pointer;">
+                        <span class="radio-checkmark"></span>
+                        <span id="optional-pcrFirstOnly">
+                            რომ არ გადადო,<br>ბარემ ახლავე დარეგისტრირდი<br><a href="https://booking.moh.gov.ge/">https://booking.moh.gov.ge/</a>
+                        </span>
+                    </label>
+                    
+                </form>
+            </div>
+            <input type="image" src="assets/arrowRight.svg" alt="submit" class="arrow-forward" id="third-arrow-forward">
+            <input type="image" src="assets/arrowLeft.svg" alt="submit" class="arrow-back" id="third-arrow-back">
+            
+        </div>
+        <div class="ilustration">
+            <img src="assets/needleCover.svg" alt="star" class="needle-cover">
+            <img src="assets/thirdPageIlustration.svg" class="images" alt="">
+        </div>
     </div>
 
     <div class="fourth-page page-container">
+        <div class="question-container">
+            <p style="font-size: 1.5vw; margin-bottom: 20px;">რედბერის მთავარი ღირებულება ჩვენი გუნდის<br>თითოეული წევრია. გარემო, რომელსაც ჩვენი<br>თანამშრომლები ქმნით, ბევრისთვის არის და ყოფილა<br>წლების განმავლობაში მიზნებისთვის ერთად ბრძოლის<br>მიზეზი, ბევრისთვის კი — ჩვენთან გადმოსვლის.<br><br>პანდემიის პერიოდში ერთმანეთსაც იშვიათად ვნახულობთ<br>პირისპირ და ყოველდღიური კომუნიკაციაც<br>გაიშვიათდა.</p>
+            <form action="" class="fourth-page-form">
+                <h1 style="font-size: 1.5vw; font-weight: 700; margin: 10px 0 12px 0;">რა სიხშირით შეიძლება გვქონდეს საერთო<br>არაფორმალური ონლაინ შეხვედრები, სადაც ყველა<br>სურვილისამებრ ჩაერთვება?*</h1>
+                <label class="radio-container"> კვირაში ორჯერ
+                    <input type="radio" name="intensity" id="twice-perWeek" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+                <label class="radio-container"> კვირაში ერთხელ
+                    <input type="radio" name="intensity" id="perWeek" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+                <label class="radio-container"> ორ კვირაში ერთხელ
+                    <input type="radio" name="intensity" id="once-twoWeek" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+                <label class="radio-container"> თვეში ერთხელ
+                    <input type="radio" name="intensity" id="perMonth" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+                
+                <h1 style="font-size: 1.5vw; font-weight: 700; margin: 10px 0 12px 0;">კვირაში რამდენი დღე ისურვებდი ოფისიდან<br>მუშაობას?*</h1>
+                <label class="radio-container"> 0
+                    <input type="radio" name="office-work" id="office0" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+                <label class="radio-container"> 1
+                    <input type="radio" name="office-work" id="office1" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+                <label class="radio-container"> 2
+                    <input type="radio" name="office-work" id="office2" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+                <label class="radio-container"> 3
+                    <input type="radio" name="office-work" id="office3" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+                <label class="radio-container"> 4
+                    <input type="radio" name="office-work" id="office4" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
+                <label class="radio-container"> 5
+                    <input type="radio" name="office-work" id="office5" style="opacity: 0; position: absolute; cursor: pointer;">
+                    <span class="radio-checkmark"></span>
+                </label>
 
+                <h1 style="font-size: 1.5vw; font-weight: 700; margin: 10px 0 12px 0;">რას ფიქრობ ფიზიკურ შეკრებებზე?</h1>
+                <textarea class="quote"></textarea>
+
+                <h1 style="font-size: 1.5vw; font-weight: 700; margin: 10px 0 12px 0;">რას ფიქრობ არსებულ გარემოზე:<br>რა მოგწონს, რას დაამატებდი, რას შეცვლიდი?</h1>
+                <textarea class="quote"></textarea>
+                <input type="button"  class="the-end" id="the-end" value="დასრულება" style="font-size: 1.5vw;">
+            </form>
+            <input type="image" src="assets/arrowLeft.svg" alt="submit" class="arrow-back" id="second-arrow-back">
+        </div>
+        <div class="ilustration">
+            <img src="assets/officeCover.svg" alt="heart" class="office-cover">
+            <img src="assets/fourthPageIlustration.svg" class="images" alt="bike">
+        </div>
     </div>
  </main>
 
