@@ -271,7 +271,9 @@ which simultaniously hides away landing page
 }
 
 /*============ FOURTH PAGE =========== */
-
+.fourth-page {
+    display: none;
+}
 .quote {
     width: 97%;
     resize: none;
@@ -300,4 +302,33 @@ which simultaniously hides away landing page
     position: absolute;
     bottom: 1vw;
     right: 0.3vw;
+}
+
+/*============ FIN =========== */
+
+.fin {
+    background-color: #232323;
+    height: 50vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.finito {
+    color: white;
+    font-weight: bold;
+    font-size: 3.3vw;
+    position: relative;
+    letter-spacing: 0.7vw;
+}
+.big-star {
+    width: 2.7vw;
+    position: absolute;
+    top: -3.2vw;
+    left: 2vw;
+}
+.small-star {
+    width: 1.7vw;
+    position: absolute;
+    right: 2vw;
+    bottom: -2vw;
 }
